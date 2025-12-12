@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Provides a radio widget for EC product variation selection.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function ec_radio_widget_theme(): array {
+  return [
+    'form_element__radio__ec_product_variation_radio' => [
+      'render element' => 'element',
+      'base hook' => 'form_element',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_form_element_alter().
+ */
+function ec_radio_widget_theme_suggestions_form_element_alter(array &$suggestions, array $variables): void {
+  $element = $variables['element'];
+
+  if (isset($element['#type']) && isset($element['#context']['widget'])) {
+    $suggestions[] = 'form_element__' . str_replace('-', '_', $element['#type']) . '_' . str_replace('-', '_', $element['#context']['widget']);
+  }
+}

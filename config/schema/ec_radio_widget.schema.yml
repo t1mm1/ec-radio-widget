@@ -1,0 +1,24 @@
+field.widget.settings.ec_product_variation_radio:
+  type: field.widget.settings.ec_product_variation_base
+  label: 'EC Product variation radio widget settings'
+  mapping:
+    label_display:
+      type: boolean
+      label: 'Display label'
+      nullable: false
+    label_text:
+      type: label
+      label: 'Label text'
+      nullable: false
+    hide_single:
+      type: boolean
+      label: 'Hide widget for single variation'
+      nullable: false
+    hide_radio:
+      type: boolean
+      label: 'Hide radio buttons visually'
+      nullable: false
+    label_display_mode:
+      type: string
+      label: 'Label display mode'
+      nullable: false

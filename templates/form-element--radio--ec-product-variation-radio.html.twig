@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Theme template for radio buttons in product variation widget.
+ */
+#}
+{%
+  set classes = [
+  errors ? 'form-item--error' : '',
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  <div>
+    {{ children }}
+
+    {% if label_display == 'after' %}
+      {{ label }}
+    {% endif %}
+  </div>
+
+  {% if description.content %}
+    <div>
+      {{ description.content }}
+    </div>
+  {% endif %}
+
+  {% if errors %}
+    <div>
+      {{ errors }}
+    </div>
+  {% endif %}
+</div>
