@@ -66,11 +66,14 @@ Once configured, the widget will automatically appear on product add-to-cart for
 
 ## License
 
-GPL-2.0+
+This project is licensed under the GPL-2.0+.
 
 ## Author
 
-Pavel Kasianov
+Pavel Kasianov.
+
+Linkedin: https://www.linkedin.com/in/pkasianov/</br>
+Drupal org: https://www.drupal.org/u/pkasianov
 
 ## Support
 
