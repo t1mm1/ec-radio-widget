@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function ec_radio_widget_theme(): array {
   return [
-    'form_element__radio__ec_product_variation_radio' => [
+    'form_element__radio_ec_product_variation_radio' => [
       'render element' => 'element',
       'base hook' => 'form_element',
     ],
