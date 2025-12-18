@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function ec_radio_widget_theme(): array {
   return [
-    'form_element__radio_ec_product_variation_radio' => [
+    'form_element__radio__ec_product_variation_radio' => [
       'render element' => 'element',
       'base hook' => 'form_element',
     ],
@@ -26,6 +26,6 @@ function ec_radio_widget_theme_suggestions_form_element_alter(array &$suggestion
   $element = $variables['element'];
 
   if (isset($element['#type']) && isset($element['#context']['widget'])) {
-    $suggestions[] = 'form_element__' . str_replace('-', '_', $element['#type']) . '_' . str_replace('-', '_', $element['#context']['widget']);
+    $suggestions[] = 'form_element__' . str_replace('-', '_', $element['#type']) . '__' . str_replace('-', '_', $element['#context']['widget']);
   }
 }
