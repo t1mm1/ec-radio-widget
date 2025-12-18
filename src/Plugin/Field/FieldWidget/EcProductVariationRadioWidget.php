@@ -224,7 +224,7 @@ class EcProductVariationRadioWidget extends ProductVariationWidgetBase implement
     array &$form,
     FormStateInterface $form_state
   ): array {
-    $element['#attached']['library'][] = 'ec_radio_widget/style';
+    $element['#attached']['library'][] = 'ec_radio_widget/styles';
 
     /** @var ProductInterface $product */
     $product = $form_state->get('product');
